@@ -1,0 +1,233 @@
+/* GENERAL SETTINGS */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Space Mono', monospace;
+}
+
+:root{
+    --white: #fff;
+    --light_blue: #c5e4f7;
+    --turqouise: #26C2AE;
+    --sage: #7F9D9F;
+    --dark-sage: #5E7A7D;
+    --emerald-green: #00474B;
+    --light-emerald-green: #0D686D;
+    --orange-red: #E17457;
+    --red: rgb(235, 12, 12);
+    --black: #000;
+}
+
+body{
+    height: 100vh;
+    width: 100%;
+    background-color: var(--light_blue);
+}
+
+/* LOGO */
+.app__logo{
+    text-align: center;
+    margin-top: 90px;
+    margin-bottom: 48px;
+}
+
+/* TIP CALCULATOR GENERAL */
+.tip__calculator{
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    padding: 48px;
+    border-radius: 12px;
+}
+
+/* GENERAL LABEL & INPUT SETTINGS */
+label{
+    color: var(--dark-sage);
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+input{
+    outline: none;
+    border: none;
+    color: var(--dark-sage);
+    font-size: 24px;
+    text-align: right;
+    background-color: #f3f9fa;
+    background-repeat: no-repeat;
+    background-position: 16px 14px;
+    padding-right: 20px;
+    padding: 8px;
+}
+
+/* ADD ICON */
+.bill__input{
+    background-image: url("./assets/images/$.png");
+    margin-bottom: 32px;
+}
+
+/* GENERAL TIPS */
+.tip{
+    margin-bottom: 24px;
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: 140px 140px;
+    row-gap: 24px;
+    column-gap: 16px;
+}
+
+.tips{
+    background-color: var(--emerald-green);
+    color: var(--white);
+    border-radius: 8px;
+    cursor: pointer;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+}
+
+/* 
+.current__tip{
+    background-color: var(--turqouise);
+    color: var(--white);
+} */
+
+
+/* NUMBER OF PEOPLE INPUT */
+.number__of__people__input{
+    background-image: url("./assets/images/person_Icon.png");
+    margin-bottom: 32px;
+}
+
+
+/* RIGHT DIV SETTINGS */
+.result{
+    background-color: var(--emerald-green);
+    color: var(--white);
+    border-radius: 12px;
+    padding: 40px 20px;
+    /* width: 90%;
+    margin-left: 24px; */
+}
+
+.tip__amount,
+.total{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 32px;
+}
+
+.person__paragraph{
+    font-size: 12px;
+    color: var(--dark-sage);
+}
+
+/* RESET BUTTON */
+.reset__btn{
+    cursor: pointer;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+    background-color: var(--light-emerald-green);
+    color: var(--emerald-green);
+    padding: 8px 0 8px 0;
+    border-radius: 5px;
+    /* margin-top: 250px; */
+}
+
+#custom__tip input{
+    /* box-sizing: border-box; */
+    width: 100%;
+}
+
+
+.tips:hover,
+.reset__btn:hover{
+background-color: var(--turqouise);
+}
+
+
+/* NUMBER OF PEOPLE */
+.people__number{
+    display: flex;
+    justify-content: space-between;
+}
+
+.error{
+    color: var(--red);
+    margin-right: 100px;
+    display: block;
+}
+
+
+
+/* MEDIA QUERIES DESKTOP RESPONSIVE */
+@media all and (min-width: 1000px){
+    body{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 80px;
+    }
+
+    input{
+        width: 26rem;
+        background-position: 17px 18px;
+        padding: 8px;
+    }
+
+    /* GENERAL TIP-CALCULATOR BOX SETTINGS */
+    .tip__calculator{
+        width: 60rem;
+        height: 30rem;
+        flex-direction: row;
+        border-radius: 16px;
+        padding: 24px;
+    }
+
+    .right__box{
+        margin-top: 16px;
+        margin-left: 20px;
+    }
+
+    .bill__input{
+        margin-bottom: 32px;
+    }
+
+    /* GENERAL TIPS SETTIGNS */
+    .tip{
+        margin-bottom: 32px;
+        grid-template-columns: 130px 130px 130px;
+        column-gap: 20px;
+        row-gap: 20px;
+    }
+
+    .tips{
+        height: 48px;
+    }
+
+    .result {
+        margin-left: auto;
+        width: 400px;
+        display: flex;
+        flex-direction: column;
+        align-content: space-between;
+        padding: 48px 38px;
+    }
+
+    .price__tip__amount,
+    .price__total__amount{
+        font-weight: 700;
+        font-size: 32px;
+        color: var(--turqouise);
+    } 
+
+    .reset__btn {
+        padding: 13px 0 13px 0;
+        margin-top: auto;
+    }
+}

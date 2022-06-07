@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="app__logo">
+        <img src="./assets/images/SPLITTER.png" alt="app logo">
+    </div>
+
+    <!-- LEFT DIV -->
+        <div class="tip__calculator">
+            <div class="right__box">
+                <label for="">Bill</label>
+                <input type="number" title="billtotal" class="input bill__input">
+                <label for="">Select Tip %</label>
+                <!-- PERCENTAGE OPTIONS -->
+                <div class="tip">
+                    <div class="tips 5">5%</div>
+                    <div class="tips 10">10%</div>
+                    <div class="tips 15">15%</div>
+                    <div class="tips 25">25%</div>
+                    <div class="tips 50">50%</div>
+                    <div id="custom__tip"><input type="number" placeholder="Custom" class="personal__tip"></div>
+                </div>
+                <div class="people__number">
+                    <label for="">Number of People</label>
+                </div>
+                <input type="number" class="input number__of__people__input" title="numberofpeople">
+            </div>
+    
+            <!-- RIGHT DIV -->
+            <div class="result">
+                <div class="tip__amount">
+                    <div class="description">
+                        <p>Tip Amount</p>
+                        <p class="person__paragraph">/ person</p>
+                    </div>
+                    <div class="price__tip__amount" id="first-tip-amount"><span>$</span> 0.00</div>
+                </div>
+                <div class="total">
+                    <div class="description">
+                        <p>Total</p>
+                        <p class="person__paragraph">/ person</p>
+                    </div>
+                    <div class="price__total__amount" id="second-tip-amount"><span>$</span> 0.00</div>
+                </div>
+                <!-- RESET OPTION -->
+                <div class="reset__btn">RESET</div>
+            </div>
+        </div>
+    <script src="./main.js"></script>
+</body>
+</html>
